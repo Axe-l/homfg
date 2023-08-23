@@ -12,7 +12,7 @@
           <a :href="SiteUrl">{{ SiteAnthor }}</a>
         </span>
         <!-- 以下信息请不要修改哦 -->
-        <span class="hidden">
+        <span class="null">
           &amp;&nbsp;Made&nbsp;by
           <a :href="config.github" target="_blank">
             {{ config.author }}
