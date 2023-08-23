@@ -23,9 +23,9 @@ jobs:
 
       - name: Delete unnecessary files
         run: |
-          rm src/components/Hitokoto.vue
-          rm src/components/Music.vue
-          rm src/components/Player.vue
+          rm ./src/components/Hitokoto.vue
+          rm ./src/components/Music.vue
+          rm ./src/components/Player.vue
 
       - name: Install Dependencies
         run: pnpm install
