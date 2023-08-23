@@ -12,9 +12,9 @@
           <a :href="SiteUrl">{{ SiteAnthor }}</a>
         </span>
         <!-- 以下信息请不要修改哦 -->
-        <span class="null">
+        <span class="hidden">
           &amp;&nbsp;Made&nbsp;by
-          <a :href="https://github.com/Axe-l/homfg" target="_blank">
+          <a :href="config.githu" target="_blank">
             {{ config.author }}
           </a>
         </span>
