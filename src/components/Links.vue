@@ -45,7 +45,7 @@ import { Icon } from "@vicons/utils";
 // 可前往 https://www.xicons.org 自行挑选并在此处引入
 import {
   Link,
-  BloggerB,
+  Blog,
   EarthFilled,
   Radio,
   Compass,
@@ -75,7 +75,7 @@ const siteLinksList = computed(() => {
 
 // 网站链接图标
 const siteIcon = {
- BloggerB,
+ Blog,
  EarthFilled,
  Radio,
  Compass,
