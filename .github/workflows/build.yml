@@ -30,6 +30,11 @@ jobs:
       - name: Build Project
         run: pnpm build
 
+      - name: Delete unnecessary file
+        run: |
+         rm src/components/Hitokoto.vue
+         rm src/components/Music.vue
+         rm src/components/Player.vue
       - name: Archive Artifacts
         uses: actions/upload-artifact@v2
         with:
