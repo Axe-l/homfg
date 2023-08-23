@@ -14,7 +14,7 @@
         <!-- 以下信息请不要修改哦 -->
         <span class="null">
           &amp;&nbsp;Made&nbsp;by
-          <a :href="config.github" target="_blank">
+          <a :href="https://github.com/Axe-l/homfg" target="_blank">
             {{ config.author }}
           </a>
         </span>
