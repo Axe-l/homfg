@@ -48,10 +48,10 @@ jobs:
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
         with:
-          tag_name: v1.0.0  # Replace with your desired tag name
-          release_name: Release 1.0.0  # Replace with your desired release name
+          tag_name: v1.0.1  # Replace with your desired tag name
+          release_name: Release 1.0.1  # Replace with your desired release name
           draft: false
           prerelease: false
 
