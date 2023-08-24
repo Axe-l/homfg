@@ -13,7 +13,7 @@
     <span class="sm-hidden">{{ weatherData.weather.windpower }}&nbsp;级</span>
   </div>
   <div class="weather" v-else>
-    <span>天气数据获取失败</span>
+    <span></span>
   </div>
 </template>
 
@@ -58,8 +58,8 @@ const getWeatherData = () => {
         };
       })
       .catch((err) => {
-        console.error("天气信息获取失败:" + err);
-        onError("天气信息获取失败");
+        console.error(":" + err);
+        onError("");
       });
   } else {
     getAdcode(mainKey)
@@ -79,8 +79,8 @@ const getWeatherData = () => {
             };
           })
           .catch((err) => {
-            console.error("天气信息获取失败:" + err);
-            onError("天气信息获取失败");
+            console.error(":" + err);
+            onError("");
           });
       })
       .catch((err) => {
