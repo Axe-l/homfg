@@ -1,6 +1,7 @@
+/*
 [{
     "name": "Github",
-    "icon": "/images/icon/github.png",
+   "icon": "/images/icon/github.png",
     "tip": "去 Github 看看",
     "url": "https://github.com/imsyy"
 }, {
@@ -29,3 +30,4 @@
     "tip": "你懂的 ~",
     "url": "https://t.me/bottom_user"
 }]
+*/
