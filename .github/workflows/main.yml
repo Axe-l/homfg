@@ -41,6 +41,15 @@ jobs:
         with:
           name: wk  # 更新为移动后的目录名称
           path: ./wk  # 更新为移动后的目录路径
+   
+      - name: Archive Artifacts
+        run: zip -r wk.zip ./wk  # 将 ./wk 文件夹打包成 wk.zip
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: wk.zip  # 更新为上传时的文件名
+          path: ./wk.zip  # 更新为上传时的文件路径
 
   release:
     needs: build
