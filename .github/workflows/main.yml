@@ -31,9 +31,6 @@ jobs:
         run: pnpm build
         
       - name: Create wk Directory
-        run: mkdir ./dist  # 创建 ./dist 文件夹
-        
-      - name: Create wk Directory
         run: mkdir ./wk  # 创建 ./wk 文件夹
         
       - name: Move Artifacts
