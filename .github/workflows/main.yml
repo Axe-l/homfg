@@ -30,11 +30,14 @@ jobs:
       - name: Build Project
         run: pnpm build
 
+      - name: Move Artifacts
+        run: mv ./dist ./wk  # 移动构建产物到 ./wk 目录
+
       - name: Archive Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: dist
-          path: ./dist
+          name: wk  # 更新为移动后的目录名称
+          path: ./wk  # 更新为移动后的目录路径
 
   release:
     needs: build
@@ -50,8 +53,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         with:
-          tag_name: v1.0.1  # Replace with your desired tag name
-          release_name: Release 1.0.1  # Replace with your desired release name
+          tag_name: v1.0.1  # 替换为您想要的标签名
+          release_name: Release 1.0.1  # 替换为您想要的发布名称
           draft: false
           prerelease: false
 
@@ -62,6 +65,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/*  # Replace with the path to your build artifacts
-          asset_name: YourArtifactName.zip  # Replace with your desired artifact name
-          asset_content_type: application/zip  # Adjust according to your artifact type
+          asset_path: ./wk/*  # 更新为移动后的目录路径
+          asset_name: index.zip  # 替换为您想要的文件名
+          asset_content_type: application/zip  # 根据文件类型进行调整
