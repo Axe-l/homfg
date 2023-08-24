@@ -73,6 +73,10 @@ const updateHitokoto = () => {
 onMounted(() => {
   getHitokotoData();
 });
+  
+</script>
+// 关闭音乐面板
+store.musicOpenState = false;
 </script>
 
 
