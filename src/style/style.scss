@@ -95,13 +95,12 @@ p {
   }
 }
 
-// 进度条样式
 .el-progress-bar {
   .el-progress-bar__outer {
     border-radius: 6px;
     background-color: #00000020;
     .el-progress-bar__inner {
-      background-color: #efefef;
+      background-color: #00CD00; /* 修改为绿色 */
       border-radius: 6px;
       text-align: center;
       font-family: "UnidreamLED";
@@ -109,9 +108,11 @@ p {
         color: #564d59;
         font-size: 0.9rem;
       }
+      transition: width 0.5s linear; /* 添加过渡效果 */
     }
   }
 }
+
 
 // Tooltip 样式
 .el-popper.is-dark {
