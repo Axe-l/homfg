@@ -100,7 +100,7 @@ p {
     border-radius: 6px;
     background-color: #00000020;
     .el-progress-bar__inner {
-      background-color: #00CD00; /* 修改为绿色 */
+      background: linear-gradient(to right, #006400 0%, #00CD00 30%); /* 渐变背景从深绿到浅绿 */
       border-radius: 6px;
       text-align: center;
       font-family: "UnidreamLED";
