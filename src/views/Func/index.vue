@@ -12,8 +12,14 @@
       <el-col :span="12">
         <div class="right cards">
           <div class="time">
+            <div class="date">
+              <span>{{ currentTime.year }}&nbsp;年&nbsp;</span>
+              <span>{{ currentTime.month }}&nbsp;月&nbsp;</span>
+              <span>{{ currentTime.day }}&nbsp;日&nbsp;</span>
+              <span class="sm-hidden">{{ currentTime.weekday }}</span>
+            </div>
             <div class="text">
-              <span class="countdown">{{ formatCountdown(countdown) }}</span>
+              <span> {{ currentTime.hour }}:{{ currentTime.minute }}:{{ currentTime.second }}</span>
             </div>
           </div>
           <Weather />
@@ -24,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { getCurrentTime } from "@/utils/getTime";
 import { mainStore } from "@/store";
 import Music from "@/components/Music.vue";
 import Hitokoto from "@/components/Hitokoto.vue";
@@ -32,43 +38,23 @@ import Weather from "@/components/Weather.vue";
 
 const store = mainStore();
 
-// Calculate countdown time
-const currentTime = new Date();
-const nextDay = new Date(currentTime.getFullYear(), currentTime.getMonth(), currentTime.getDate() + 1);
-const countdown = ref(getTimeDifference(currentTime, nextDay));
-const countdownInterval = ref(null);
+// 当前时间
+const currentTime = ref({});
+const timeInterval = ref(null);
 
-// Update countdown time
-const updateCountdown = () => {
-  const now = new Date();
-  countdown.value = getTimeDifference(now, nextDay);
+// 更新时间
+const updateTimeData = () => {
+  currentTime.value = getCurrentTime();
 };
 
 onMounted(() => {
-  updateCountdown();
-  countdownInterval.value = setInterval(updateCountdown, 1000);
+  updateTimeData();
+  timeInterval.value = setInterval(updateTimeData, 1000);
 });
 
 onBeforeUnmount(() => {
-  clearInterval(countdownInterval.value);
+  clearInterval(timeInterval.value);
 });
-
-// Format countdown time to HH:mm:ss
-const formatCountdown = (time) => {
-  const formattedHour = String(time.hours).padStart(2, '0');
-  const formattedMinute = String(time.minutes).padStart(2, '0');
-  const formattedSecond = String(time.seconds).padStart(2, '0');
-  return `${formattedHour}:${formattedMinute}:${formattedSecond}`;
-};
-
-// Calculate time difference
-const getTimeDifference = (start, end) => {
-  const timeDifference = end - start;
-  const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
-  const seconds = Math.floor((timeDifference / 1000) % 60);
-  return { hours, minutes, seconds };
-};
 </script>
 
 <style lang="scss" scoped>
