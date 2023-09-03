@@ -10,13 +10,13 @@
     </Transition>
     <!-- 新内容：时间胶囊 -->
     <div class="time-capsule">
-      <span class="text">今日已经度过了&nbsp;{{ timeData.day.elapsed }}&nbsp;小时</span>
+      <span class="text"> 今日已经度过了&nbsp;{{ timeData.day.elapsed }}&nbsp;小时</span>
       <el-progress :text-inside="true" :stroke-width="15" :percentage="timeData.day.pass" />
-      <span class="text">本周已经度过了&nbsp;{{ timeData.week.elapsed }}&nbsp;天</span>
+      <span class="text"> 本周已经度过了&nbsp;{{ timeData.week.elapsed }}&nbsp;天</span>
       <el-progress :text-inside="true" :stroke-width="15" :percentage="timeData.week.pass" />
-      <span class="text">本月已经度过了&nbsp;{{ timeData.month.elapsed }}&nbsp;天</span>
+      <span class="text"> 本月已经度过了&nbsp;{{ timeData.month.elapsed }}&nbsp;天</span>
       <el-progress :text-inside="true" :stroke-width="15" :percentage="timeData.month.pass" />
-      <span class="text">今年已经度过了&nbsp;{{ timeData.year.elapsed }}&nbsp;个月</span>
+      <span class="text"> 今年已经度过了&nbsp;{{ timeData.year.elapsed }}&nbsp;个月</span>
       <el-progress :text-inside="true" :stroke-width="15" :percentage="timeData.year.pass" />
 
     </div>
@@ -84,8 +84,9 @@ onBeforeUnmount(() => {
 
   .text {
     display: block;
-    margin: 1rem 0rem 0.5rem 0rem;
-    font-size: 0.6rem;
+    margin: 0.8rem 0rem 0.1rem 0.3rem;
+    font-size: 0.66rem;
+    font-family: "Pacifico-Regular";
   }
 
 

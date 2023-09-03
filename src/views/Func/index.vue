@@ -23,8 +23,8 @@
             </div>
             <div class="text">
               <span
-                :style="`background-image: linear-gradient(to right, #00ff00, #ff0000); background-clip: text; -webkit-background-clip: text; color: transparent;`">
-                {{ remainingTime.hours }}:{{ remainingTime.minutes }}: {{ remainingTime.seconds }}</span>
+                :style="`font-family: Pacifico-Regular; background-image: linear-gradient(to right, #00ff00, #ff0000); background-clip: text; -webkit-background-clip: text; color: transparent;`">
+                {{ remainingTime.hours }}:{{ remainingTime.minutes }}:{{ remainingTime.seconds }}</span>
             </div>
           </div>
           <Weather />
@@ -151,10 +151,11 @@ const currentTime = computed(() => getCurrentTime());
           margin-top: 5px;
           font-size: 1.25rem;
           letter-spacing: 2px;
+          font-family: "Pacifico-Regular";
         }
 
         .text {
-          margin-top: 10px;
+          margin-top: -5px;
           font-size: 3.25rem;
           letter-spacing: 2px;
           font-family: "UnidreamLED";
