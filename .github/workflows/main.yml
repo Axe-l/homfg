@@ -1,0 +1,52 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Check Node.js version
+        run: node -v
+
+      - name: Build Project
+        run: pnpm build
+        
+      - name: Create wk Directory
+        run: mkdir ./wk  # 创建 ./wk 文件夹
+        
+      - name: Move Artifacts
+        run: mv ./dist/* ./wk  # 移动构建产物到 ./wk 目录
+
+      - name: Archive Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: wk  # 更新为移动后的目录名称
+          path: ./wk  # 更新为移动后的目录路径
+   
+      - name: Create wk.zip
+        run: zip -r wk.zip ./wk  # 将 ./wk 文件夹打包成 wk.zip
+    
+      - name: Check File
+        run: ls ./wk.zip
+        
+
+   

@@ -1,0 +1,42 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Check Node.js version
+        run: node -v
+
+      - name: Build Project
+        run: pnpm build
+
+      - name: Delete unnecessary file
+        run: |
+         rm src/components/Hitokoto.vue
+         rm src/components/Music.vue
+         rm src/components/Player.vue
+      - name: Archive Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: ./dist

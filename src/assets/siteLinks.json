@@ -1,0 +1,33 @@
+[
+  {
+    "icon": "Blog",
+    "name": "Blog",
+    "link": "https://aioff.net/"
+  },
+  {
+    "icon": "EarthFilled",
+    "name": "地球模型",
+    "link": "https://3d-app.yunser.com/earth/"
+  },
+  {
+    "icon": "Radio",
+    "name": "电台花园",
+    "link": "https://radio.garden/"
+  },
+  {
+    "icon": "Compass",
+    "name": "起始页",
+    "link": "https://6ui.net/"
+  },
+  {
+    "icon": "Share",
+    "name": "局域网共享",
+    "link": "https://952727.xyz/"
+  },
+  {
+    "icon": "MachineLearning",
+    "name": "CHATGPT",
+    "link": "https://ai.952727.xyz/"
+  }
+]
+
