@@ -1,22 +1,10 @@
 <template>
   <div class="cover">
-    <img
-      v-show="store.imgLoadStatus"
-      class="bg"
-      alt="cover"
-      :src="bgUrl"
-      @load="imgLoadComplete"
-      @error.once="imgLoadError"
-      @animationend="imgAnimationEnd"
-    />
+    <img v-show="store.imgLoadStatus" class="bg" alt="cover" :src="bgUrl" @load="imgLoadComplete"
+      @error.once="imgLoadError" @animationend="imgAnimationEnd" />
     <div :class="store.backgroundShow ? 'gray hidden' : 'gray'" />
     <Transition name="fade" mode="out-in">
-      <a
-        v-if="store.backgroundShow && store.coverType != '3'"
-        class="down"
-        :href="bgUrl"
-        target="_blank"
-      >
+      <a v-if="store.backgroundShow && store.coverType != '3'" class="down" :href="bgUrl" target="_blank">
         下载壁纸
       </a>
     </Transition>
@@ -37,16 +25,30 @@ const emit = defineEmits(["loadComplete"]);
 const bgRandom = Math.floor(Math.random() * 16 + 1);
 
 // 更换壁纸链接
-const changeBg = (type) => {
-  if (type == 0) {
-    bgUrl.value = `/images/background${bgRandom}.jpg`;
-    } else if (type == 1) {
-    bgUrl.value = "https://api.dujin.org/bing/1920.php";
-  } else if (type == 2) {
-    bgUrl.value = "https://api.btstu.cn/sjbz/api.php?lx=fengjing&format=images";
-  } else if (type == 3) {
-    bgUrl.value = "https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images";
-  }
+const externalBgUrls = [
+  "https://s1.ax1x.com/2023/09/04/pPDja79.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDjI9P.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDv9jU.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDvPuF.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDvpcT.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDviB4.png",
+  "https://s1.ax1x.com/2023/09/04/pPDvS3V.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDvAE9.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDvENR.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDve9x.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDvFHJ.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDvV41.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDvngK.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDvm36.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDvujO.jpg",
+  "https://s1.ax1x.com/2023/09/04/pPDjI9P.jpg",
+  // Add more external image links as needed
+];
+
+// Update the changeBg function to select a random external image link
+const changeBg = () => {
+  const randomIndex = Math.floor(Math.random() * externalBgUrls.length);
+  bgUrl.value = externalBgUrls[randomIndex];
 };
 
 // 图片加载完成
@@ -109,6 +111,7 @@ onBeforeUnmount(() => {
     animation: fade-blur-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     animation-delay: 0.45s;
   }
+
   .gray {
     opacity: 1;
     position: absolute;
@@ -116,18 +119,18 @@ onBeforeUnmount(() => {
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(
-        rgba(0, 0, 0, 0) 0,
-        rgba(0, 0, 0, 0.5) 100%
-      ),
+    background-image: radial-gradient(rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.5) 100%),
       radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.3) 166%);
 
     transition: 1.5s;
+
     &.hidden {
       opacity: 0;
       transition: 1.5s;
     }
   }
+
   .down {
     font-size: 16px;
     color: white;
@@ -145,10 +148,12 @@ onBeforeUnmount(() => {
     display: flex;
     justify-content: center;
     align-items: center;
+
     &:hover {
       transform: scale(1.05);
       background-color: #00000060;
     }
+
     &:active {
       transform: scale(1);
     }
