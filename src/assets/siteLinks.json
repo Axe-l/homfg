@@ -2,7 +2,7 @@
   {
     "icon": "Blog",
     "name": "Blog",
-    "link": "https://blog.6ui.net"
+    "link": "https://blog.6ui.net/"
   },
   {
     "icon": "EarthFilled",
@@ -42,7 +42,7 @@
   {
     "icon": "Satellite",
     "name": "地球上的卫星",
-    "link": "https://platform.leolabs.space/visualization"
+    "link": "https://platform.leolabs.space/visualization/"
   },
   {
     "icon": "Fish",
