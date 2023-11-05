@@ -41,8 +41,8 @@
   },
   {
     "icon": "Satellite",
-    "name": "地球上的卫星",
-    "link": "https://platform.leolabs.space/visualization/"
+    "name": "云图",
+    "link": "https://zoom.earth/maps/precipitation/#view=21.9,121.2,6z/date=2023-10-20,03:00,-4/model=icon/overlays=wind"
   },
   {
     "icon": "Fish",

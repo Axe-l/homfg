@@ -26,22 +26,21 @@ const bgRandom = Math.floor(Math.random() * 16 + 1);
 
 // 更换壁纸链接
 const externalBgUrls = [
-  "https://s1.ax1x.com/2023/09/04/pPDja79.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDjI9P.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDv9jU.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDvPuF.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDvpcT.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDviB4.png",
-  "https://s1.ax1x.com/2023/09/04/pPDvS3V.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDvAE9.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDvENR.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDve9x.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDvFHJ.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDvV41.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDvngK.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDvm36.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDvujO.jpg",
-  "https://s1.ax1x.com/2023/09/04/pPDjI9P.jpg",
+  "https://community.codewave.163.com/upload/app/1699191901775_background3.jpg",
+  "https://community.codewave.163.com/upload/app/1699191969978_background4.jpg",
+  "https://community.codewave.163.com/upload/app/1699191989529_background6.jpg",
+  "https://community.codewave.163.com/upload/app/1699192000946_background8.jpg",
+  "https://community.codewave.163.com/upload/app/1699192036354_background7.jpg",
+  "https://community.codewave.163.com/upload/app/1699192047412_background10.jpg",
+  "https://community.codewave.163.com/upload/app/1699192081588_background13.jpg",
+  "https://community.codewave.163.com/upload/app/1699192082205_background11.jpg",
+  "https://community.codewave.163.com/upload/app/1699192787819_background1.jpg",
+  "https://community.codewave.163.com/upload/app/1699192578424_background5.jpg",
+  "https://community.codewave.163.com/upload/app/1699192551540_background12.jpg",
+  "https://community.codewave.163.com/upload/app/1699193192479_background9.png",
+  "https://community.codewave.163.com/upload/app/1699190088320_background11.jpg",
+  "https://community.codewave.163.com/upload/app/1699190097935_background12.jpg",
+  "https://community.codewave.163.com/upload/app/1699190165812_background13.jpg"
   // Add more external image links as needed
 ];
 

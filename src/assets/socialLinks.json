@@ -1,9 +1,15 @@
-
-
-[{
+[
+  {
     "name": "Github",
     "icon": "/images/icon/github.png",
     "tip": "去 Github 看看",
     "url": "https://github.com/Axe-l/homfg"
+  },
 
-}]
+  {
+    "name": "Status",
+    "icon": "/images/icon/status.png",
+    "tip": "Status",
+    "url": "https://kk.buaoye.net/"
+  }
+]
