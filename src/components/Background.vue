@@ -26,21 +26,23 @@ const bgRandom = Math.floor(Math.random() * 16 + 1);
 
 // 更换壁纸链接
 const externalBgUrls = [
-  "https://community.codewave.163.com/upload/app/1699191901775_background3.jpg",
-  "https://community.codewave.163.com/upload/app/1699191969978_background4.jpg",
-  "https://community.codewave.163.com/upload/app/1699191989529_background6.jpg",
-  "https://community.codewave.163.com/upload/app/1699192000946_background8.jpg",
-  "https://community.codewave.163.com/upload/app/1699192036354_background7.jpg",
-  "https://community.codewave.163.com/upload/app/1699192047412_background10.jpg",
-  "https://community.codewave.163.com/upload/app/1699192081588_background13.jpg",
-  "https://community.codewave.163.com/upload/app/1699192082205_background11.jpg",
-  "https://community.codewave.163.com/upload/app/1699192787819_background1.jpg",
-  "https://community.codewave.163.com/upload/app/1699192578424_background5.jpg",
-  "https://community.codewave.163.com/upload/app/1699192551540_background12.jpg",
-  "https://community.codewave.163.com/upload/app/1699193192479_background9.png",
-  "https://community.codewave.163.com/upload/app/1699190088320_background11.jpg",
-  "https://community.codewave.163.com/upload/app/1699190097935_background12.jpg",
-  "https://community.codewave.163.com/upload/app/1699190165812_background13.jpg"
+  "https://g2.cloudimg.cc/2024/02/23/65d814581e097.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d8153686104.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d815368b393.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d81537687db.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d815375fd33.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d81537ad0ed.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d8153928fab.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d815399733d.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d8153a59744.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d8153bd6a8a.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d8153c7d4b8.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d8153cef067.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d8153f7d072.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d815407b596.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d81540cc0f2.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d815409c41e.jpg",
+  "https://g2.cloudimg.cc/2024/02/23/65d815435a9fd.png"
   // Add more external image links as needed
 ];
 
